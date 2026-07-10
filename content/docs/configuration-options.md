@@ -65,6 +65,26 @@ Template tags produce the following output:
 * `{{author-login}}`: the login/username of the author
 * `{{author-name}}`: the full name of the author (might be empty based on the user's profile)
 
+### Sign Off Commits
+
+You can have Decap CMS append a git-style `Signed-off-by` trailer to every commit message (create, update, delete, and media operations) by setting the `signoff_commits` option under `backend` in your Decap CMS `config.yml`.
+
+```yaml
+backend:
+  signoff_commits: true
+```
+
+- Type: `boolean`
+- Default: `false`
+
+When enabled, the trailer is built from the current user's name and email, in the same style used by `git commit --signoff`:
+
+```
+Signed-off-by: Jane Doe <jane@example.com>
+```
+
+If the user's name or email is unavailable, Decap CMS logs a console warning and skips adding the trailer for that commit.
+
 ## Publish Mode
 
 By default, all entries created or edited in the Decap CMS are committed directly into the main repository branch. The `publish_mode` option allows you to enable [Editorial Workflow](/docs/editorial-workflows/) mode for more control over the content publishing phases. You can enable the Editorial Workflow with the following line in your Decap CMS `config.yml` file:
