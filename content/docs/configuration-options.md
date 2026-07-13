@@ -249,7 +249,7 @@ The `collections` setting is the heart of your Decap CMS configuration, as it de
 * `create`: for `folder` collections only; `true` allows users to create new items in the collection; defaults to `false`
 * `publish`: for `publish_mode: editorial_workflow` only; `false` hides UI publishing controls for a collection; defaults to `true`
 * `hide`: `true` hides a collection in the CMS UI; defaults to `false`. Useful when using the relation widget to hide referenced collections.
-* `delete`: `false` prevents users from deleting items in a collection; defaults to `true`
+* `delete`: `false` prevents users from deleting items in a collection; defaults to `true` for `folder` collections and `false` for `file` collections
 * `extension`: see detailed description below
 * `format`: see detailed description below
 * `frontmatter_delimiter`: see detailed description under `format`
