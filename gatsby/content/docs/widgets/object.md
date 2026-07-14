@@ -25,9 +25,9 @@ The object widget allows you to group multiple widgets together, nested under a 
       - {label: "Name", name: "name", widget: "string"}
       - label: "Birthdate"
         name: "birthdate"
-        widget: "date"
+        widget: "datetime"
         default: ""
-        format: "MM/DD/YYYY"
+        date_format: "MM/DD/YYYY"
       - label: "Address"
         name: "address"
         widget: "object"
