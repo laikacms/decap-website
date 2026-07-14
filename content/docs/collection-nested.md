@@ -18,6 +18,8 @@ To enable it:
   * `subfolders`**:** *(default: true)* if set to false, you don't need to have md files in subfolders. <span class="version-tag">3.6</span>
 * Add a **`meta`** object with a `path` property. It allows editing the path of entries. Moving an existing entry will move the entire subtree of the entry to the new location.
 
+  * `index_file`**:** *(optional)* filename (without extension) used for every entry's data file within the directory set by the `path` field, e.g. `_index` writes `_index.md`. If omitted, the filename is instead generated from the entry's `title` field for new entries, or the existing filename is preserved when editing an entry.
+
 Example configuration:
 
 ```yaml
